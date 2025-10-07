@@ -172,61 +172,58 @@ html {
   font-size: 14px;
 }
 
-/* BLOCKS */
-/* Conteneur global */
-.block-container {
-	max-width: 1200px;
-	margin: 0 auto;
-}
-/* Deux colonnes */
-.block-columns {
-	display: flex;
-	gap: 40px;
-	align-items: normal;
+/* TEXT_IMG */
+.block-devenir {
+  background: #fff;
+  padding: 60px 20px;
 }
 
-.block-alternance {
-	margin: 40px auto;
-	border: 2px solid #c8102e;
-	border-radius: 8px;
-	overflow: hidden;
-	background: #fff;
-	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* Conteneur global */
+.block-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.block-alternance img {
-	width: 100%;
-	height: auto;
-	display: block;
+
+/* Titre en haut */
+.block-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  text-align: left;
 }
-.block-alternance-content {
-	padding: 24px 30px;
+
+/* Deux colonnes */
+.block-columns-img {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
-.block-alternance-content h2 {
-	font-size: 200%;
-	margin-top: 0;
-	margin-bottom: 16px;
+
+/* Colonne texte */
+.block-text {
+  flex: 1;
+  padding-left: 5%;
 }
-.block-alternance-content p {
-	font-size: 16px;
-	line-height: 1.6;
-	color: #333;
-	margin-bottom: 16px;
+
+.block-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
 }
-.block-button {
-	margin: auto;
-	text-align: center;
+
+/* Colonne image */
+.block-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
-.block-button a {
-	background-color: #e30613;
-	color: #fff;
-	display: inline-block;
-	padding: .5rem 2rem;
-	border-radius: 3.45rem;
-	font-weight: 700;
-	text-decoration: none;
-}
-.block-button a:hover {
-	text-decoration: underline;
+
+.block-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
     </style>
 </head>
@@ -248,12 +245,15 @@ html {
   </div>
 </header>
 
-<div class="block-container">
-  <div class="block-columns">
-	<section class="block-alternance">
-		<img src="https://isen-ouest.fr/wp-content/uploads/2024/09/11/schema-des-etudes-isen-ouest-32.png" alt="Alternance ISEN Ouest">
-		<div class="block-alternance-content">
-		<h2>Formations post-bac</h2>
+<section class="block-devenir">
+  <div class="block-container">
+    <!-- Titre en haut -->
+    <h1 class="block-title">Formations post-bac</h1>
+
+    <!-- Deux colonnes -->
+    <div class="block-columns-img">
+      <!-- Colonne gauche : texte -->
+      <div class="block-text">
 			<p>
 Chaque étudiant construit son propre parcours de formation sur 5 ans
 </p><p>
@@ -265,10 +265,15 @@ Après la deuxième année, il est possible de choisir une poursuite d’études
 </p><p>
 Au niveau Master 1, qu’il soit sous statut étudiant ou apprenti, chaque élève accède à un large choix de domaines professionnels sans concours ni critère de classement.
 			</p>
-		</div>
-	</section>
-</div>
+      </div>
 
+      <!-- Colonne droite : image -->
+      <div class="block-image">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/09/11/schema-des-etudes-isen-ouest-32.png" alt="Alternance ISEN Ouest">
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="site-footer">
   <div class="footer-container">
